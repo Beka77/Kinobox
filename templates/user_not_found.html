@@ -1,0 +1,30 @@
+{% extends 'homepage.html' %}
+{% load static  %}
+{% block content  %}
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+
+    <!-- ==========Four-Not-Four-Section========== -->
+    <section class="section-404 padding-top padding-bottom">
+        <div class="container">
+            <div class="thumb-404">
+                <img src="{% static  '/images/404.png' %}" alt="404">
+            </div>
+            <h3 class="title">Пользователь не найден</h3>
+            <p class="text-muted">Пользователь с таким именем или же паролем не найден. <br> Проверьте что вы правильно написали логин и пароль.</p>
+            <a href="{% url 'index' %}" class="custom-button">Вернуться домой <i class="flaticon-right"></i></a>
+        </div>
+    </section>
+    <!-- ==========Four-Not-Four-Section========== -->
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+
+    <!-- ==========Four-Not-Four-Section========== -->
+    <section class="section-404 padding-top padding-bottom">
+        <div class="container">
+            <div class="thumb-404">
+                <img src="{% static  '/images/404.png' %}" alt="404">
+            </div>
+            <h3 class="title">Ошибка регистрации</h3>
+            <p class="text-muted">Произошла ошибка при регистрации пользователя. <br> Проверьте что вы указали все
+                данные, логин с таким именем существует и также пароли не должны различаться.</p>
+            <a href="{% url 'index' %}" class="custom-button">Вернуться домой <i class="flaticon-right"></i></a>
+            <a href="{% url 'register' %}" class="custom-button">Вернуться назад <i class="flaticon-right"></i></a>
+        </div>
+    </section>
+    <!-- ==========Four-Not-Four-Section========== -->
+
+    {% endblock %}

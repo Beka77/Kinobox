@@ -1,0 +1,333 @@
+{% extends 'homepage.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#0" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+    <!-- ==========Header-Section========== -->
+    {% include 'include/header.html' %}
+    <!-- ==========Header-Section========== -->
+
+    <!-- ==========Banner-Section========== -->
+    <section class="details-banner bg_img" data-background="{% static '/images/banner/banner03.jpg' %}">
+        <div class="container">
+            <div class="details-banner-wrapper">
+                <div class="details-banner-thumb">
+                    <img src="{{ movie.poster.url }}" alt="movie">
+                    <a href="{{ movie.trailer_url }}" class="video-popup">
+                        <img src="{% static '/images/movie/video-button.png' %}" alt="movie">
+                    </a>
+                </div>
+                <div class="details-banner-content offset-lg-3">
+                    <h3 class="title">{{ movie.title }}</h3>
+                    <div class="tags">
+                        <a href="#0">English</a>
+                        <a href="#0">Hindi</a>
+                        <a href="#0">Telegu</a>
+                        <a href="#0">Tamil</a>
+                    </div>
+                    <a href="#0" class="button">{{ movie.category }}</a>
+                    <div class="social-and-duration">
+                        <div class="duration-area">
+                            <div class="item">
+                                <i class="fas fa-calendar-alt"></i><span>{{ movie.release_date }}</span>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-clock"></i><span>{{ movie.duration }}</span>
+                            </div>
+                        </div>
+                        <ul class="social-share">
+                            <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#0"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a href="#0"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ==========Banner-Section========== -->
+
+    <!-- ==========Book-Section========== -->
+    <section class="book-section bg-one">
+        <div class="container">
+            <div class="book-wrapper offset-lg-3">
+                <div class="left-side">
+                    <div class="item">
+                        <div class="item-header">
+                            <div class="thumb">
+                                <img src="{% static '/images/movie/tomato2.png' %}" alt="movie">
+                            </div>
+                            <div class="counter-area">
+                                <span class="counter-item odometer" data-odometer-final="88">0</span>
+                            </div>
+                        </div>
+                        <p>томатометр</p>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">
+                            <div class="thumb">
+                                <img src="{% static '/images/movie/cake2.png' %}" alt="movie">
+                            </div>
+                            <div class="counter-area">
+                                <span class="counter-item odometer" data-odometer-final="88">0</span>
+                            </div>
+                        </div>
+                        <p>оценка аудитории</p>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">
+                            <h5 class="title">{{ movie.rating }}.0</h5>
+                            <div class="rated">
+
+                                <i class="fas fa-heart"></i>
+
+
+                            </div>
+                        </div>
+                        <p>Оценка пользователей</p>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">
+                            <div class="rated rate-it">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h5 class="title">0.0</h5>
+                        </div>
+                        <p><a href="#0">Оценить</a></p>
+                    </div>
+                </div>
+                <a href="{% url 'index_timetable' '07-09-2022' %}" class="custom-button">Посмотреть сеансы</a>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Book-Section========== -->
+
+    <!-- ==========Movie-Section========== -->
+    <section class="movie-details-section padding-top padding-bottom">
+        <div class="container">
+            <div class="row justify-content-center flex-wrap-reverse mb--50">
+                <div class="col-lg-3 col-sm-10 col-md-6 mb-50">
+                    <div class="widget-1 widget-tags">
+                        <ul>
+                            <li>
+                                <a href="#0">2D</a>
+                            </li>
+                            <li>
+                                <a href="#0">imax 2D</a>
+                            </li>
+                            <li>
+                                <a href="#0">4DX</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget-1 widget-offer">
+                        <h3 class="title">Applicable offer</h3>
+                        <div class="offer-body">
+                            <div class="offer-item">
+                                <div class="thumb">
+                                    <img src="{% static '/images/sidebar/offer01.png' %}" alt="idebar">
+                                </div>
+                                <div class="content">
+                                    <h6>
+                                        <a href="#0">Amazon Pay Cashback Offer</a>
+                                    </h6>
+                                    <p>Win Cashback Upto Rs 300*</p>
+                                </div>
+                            </div>
+                            <div class="offer-item">
+                                <div class="thumb">
+                                    <img src="{% static '/images/sidebar/offer02.png' %}" alt="sidebar">
+                                </div>
+                                <div class="content">
+                                    <h6>
+                                        <a href="#0">PayPal Offer</a>
+                                    </h6>
+                                    <p>Transact first time with Paypal and
+                                        get 100% cashback up to Rs. 500</p>
+                                </div>
+                            </div>
+                            <div class="offer-item">
+                                <div class="thumb">
+                                    <img src="{% static '/images/sidebar/offer03.png' %}" alt="sidebar">
+                                </div>
+                                <div class="content">
+                                    <h6>
+                                        <a href="#0">HDFC Bank Offer</a>
+                                    </h6>
+                                    <p>Get 15% discount up to INR 100*
+                                        and INR 50* off on F&B T&C apply</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% for advert in adverts %}
+                    <div class="widget-1 widget-banner">
+                        <div class="widget-1-body">
+                            <a href="{{ advert.url_advert }}">
+                                <img src="{{ advert.image.url }}" alt="banner">
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-lg-9 mb-50">
+                    <div class="movie-details">
+                        <h3 class="title">Скриншоты с фильма</h3>
+                        <div class="details-photos owl-carousel">
+                            {% for movie_image in movie.movie_post.all %}
+                            <div class="thumb">
+                                <a href="{{ movie_image.image.url }}" class="img-pop">
+                                    <img src="{{ movie_image.image.url }}" alt="movie">
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="tab summery-review">
+                            <ul class="tab-menu">
+                                <li>
+                                    Описание
+                                </li>
+                                <li class="active">
+                                    Отзывы пользователей <span>147</span>
+                                </li>
+                            </ul>
+                            <div class="tab-area">
+
+                                <div class="tab-item">
+                                    <div class="item">
+                                        <h5 class="sub-title">Описание фильма</h5>
+                                        <p>{{ movie.description }}</p>
+                                    </div>
+                                    {% if movie.movie_cast.all %}
+                                    <div class="item">
+                                        <div class="casting-slider owl-carousel">
+                                            {% for cast in movie.movie_cast.all %}
+                                            {% if cast.person == "Актёр" %}
+                                            <div class="cast-item">
+                                                <div class="cast-thumb">
+                                                    <a href="#0">
+                                                        <img src="{{ cast.image.url }}" alt="cast">
+                                                    </a>
+                                                </div>
+                                                <div class="cast-content">
+                                                    <h6 class="cast-title"><a href="#0">{{ cast.first_name }} {{ cast.last_name }}</a></h6>
+                                                    <span class="cate">{{ cast.person }}</span>
+                                                    <p>{{ cast.movie_person }}</p>
+                                                </div>
+                                            </div>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="header">
+                                            <h5 class="sub-title">В ролях</h5>
+                                            <div class="navigation">
+                                                <div class="cast-prev-2"><i
+                                                        class="flaticon-double-right-arrows-angles"></i></div>
+                                                <div class="cast-next-2"><i
+                                                        class="flaticon-double-right-arrows-angles"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="casting-slider-two owl-carousel">
+                                            {% for cast in movie.movie_cast.all %}
+                                            {% if cast.person != "Актёр" %}
+                                            <div class="cast-item">
+                                                <div class="cast-thumb">
+                                                    <a href="#0">
+                                                        <img src="{{ cast.image.url }}" alt="cast">
+                                                    </a>
+                                                </div>
+                                                <div class="cast-content">
+                                                    <h6 class="cast-title"><a href="#0">{{ cast.first_name }} {{ cast.last_name }}</a></h6>
+                                                    <span class="cate">{{ cast.person }}</span>
+                                                </div>
+                                            </div>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                <div class="tab-item active">
+                                    {% for review in movie.review_movie.all %}
+                                    <div class="movie-review-item">
+                                        <div class="author">
+                                            <div class="thumb">
+                                                <a href="#0">
+                                                    <img src="{{ review.image.url }}" alt="cast">
+                                                </a>
+                                            </div>
+                                            <div class="movie-review-info">
+                                                <span class="reply-date">{{ review.created }}</span>
+                                                <h6 class="subtitle"><a href="#0">{{ review.full_name }}</a></h6>
+                                                <span><i class="fas fa-check"></i> verified review</span>
+                                            </div>
+                                        </div>
+                                        <div class="movie-review-content">
+                                            <div class="review">
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                                <i class="flaticon-favorite-heart-button"></i>
+                                            </div>
+                                            <h6 class="cont-title">{{ review.title }}</h6>
+                                            <p>{{ review.description }}</p>
+                                            <div class="review-meta">
+                                                <a href="#0">
+                                                    <i class="flaticon-hand"></i><span>8</span>
+                                                </a>
+                                                <a href="#0" class="dislike">
+                                                    <i class="flaticon-dont-like-symbol"></i><span>0</span>
+                                                </a>
+                                                <a href="#0">
+                                                    Report Abuse
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    <div class="load-more text-center">
+                                        <a href="#0" class="custom-button transparent">load more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Movie-Section========== -->
+
+    <!-- ==========Newslater-Section========== -->
+    {% include 'include/footer.html' %}
+    <!-- ==========Newslater-Section========== -->
+
+
+    {% endblock %}

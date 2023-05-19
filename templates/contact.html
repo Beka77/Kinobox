@@ -1,0 +1,182 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#0" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+    <!-- ==========Header-Section========== -->
+    {% include 'include/header.html' %}
+    <!-- ==========Header-Section========== -->
+
+    <!-- ==========Banner-Section========== -->
+    <section class="main-page-header speaker-banner bg_img"
+        data-background="{% static '/images/banner/banner07.jpg' %}">
+        <div class="container">
+            <div class="speaker-banner-content">
+                <h2 class="title">СВЯЗАТЬСЯ С НАМИ</h2>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="{% url 'index' %}">
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        Связаться с нами
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Banner-Section========== -->
+
+    <!-- ==========Contact-Section========== -->
+    <section class="contact-section padding-top">
+        <div class="contact-container">
+            <div class="bg-thumb bg_img" data-background="{% static '/images/contact/contact.jpg' %}"></div>
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-7 col-lg-6 col-xl-5">
+                        <div class="section-header-3 left-style">
+                            <span class="cate">Связаться с нами</span>
+                            <h2 class="title"></h2>
+                            <p>Мы хотели бы поговорить о том, как мы можем работать вместе. Отправьте нам сообщение
+                                ниже, и мы ответим как можно скорее.</p>
+                        </div>
+                        <form class="contact-form" id="contact_form_submit" method="POST"
+                            onsubmit="return validateForm()">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="name">Имя:</label>
+                                <input type="text" placeholder="Введите имя" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="text" placeholder="Введите email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение:</label>
+                                <textarea name="message" placeholder="Введите сообщение"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="send" value="Send Message">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-5 col-lg-6">
+                        <div class="padding-top padding-bottom contact-info">
+                            <div class="info-area">
+                                <div class="info-item">
+                                    <div class="info-thumb">
+                                        <img src="{% static '/images/contact/contact01.png' %}" alt="contact">
+                                    </div>
+                                    <div class="info-content">
+                                        <h6 class="title">Номер телефона</h6>
+                                        <a href="Tel:+996 779 251 848">+996 779 251 848</a>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-thumb">
+                                        <img src="{% static '/images/contact/contact02.png' %}" alt="contact">
+                                    </div>
+                                    <div class="info-content">
+                                        <h6 class="title">Email</h6>
+                                        <a href="mailto:bekakasymjanov@gmail.com"><span class="__cf_email__"
+                                                data-cfemail="a5cccbc3cae5e7cac9c0d1ca">support@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Contact-Section========== -->
+
+    <!-- ==========Contact-Counter-Section========== -->
+    <section class="contact-counter padding-top padding-bottom">
+        <div class="container">
+            <div class="row justify-content-center mb-30-none">
+                <div class="col-sm-6 col-md-3">
+                    <div class="contact-counter-item">
+                        <div class="contact-counter-thumb">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="contact-counter-content">
+                            <div class="counter-item">
+                                <h5 class="title odometer" data-odometer-final="130">0</h5>
+                                <h5 class="title">k</h5>
+                            </div>
+                            <p>Подписчики</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="contact-counter-item active">
+                        <div class="contact-counter-thumb">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="contact-counter-content">
+                            <div class="counter-item">
+                                <h5 class="title odometer" data-odometer-final="35">0</h5>
+                                <h5 class="title">k</h5>
+                            </div>
+                            <p>Участников</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="contact-counter-item">
+                        <div class="contact-counter-thumb">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="contact-counter-content">
+                            <div class="counter-item">
+                                <h5 class="title odometer" data-odometer-final="47">0</h5>
+                                <h5 class="title">k</h5>
+                            </div>
+                            <p>Подписчики</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="contact-counter-item">
+                        <div class="contact-counter-thumb">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-counter-content">
+                            <div class="counter-item">
+                                <h5 class="title odometer" data-odometer-final="291">0</h5>
+                                <h5 class="title">k</h5>
+                            </div>
+                            <p>Подписчики</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Contact-Counter-Section========== -->
+
+    <!-- ==========Newslater-Section========== -->
+    {% include 'include/footer.html' %}
+    <!-- ==========Newslater-Section========== -->
+
+
+    {% endblock %}

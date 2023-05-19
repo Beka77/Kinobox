@@ -1,0 +1,163 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#0" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+    <!-- ==========Header-Section========== -->
+    {% include 'include/header.html' %}
+    <!-- ==========Header-Section========== -->
+
+    <!-- ==========Window-Warning-Section========== -->
+    <section class="window-warning inActive">
+        <div class="lay"></div>
+        <div class="warning-item">
+            <h6 class="subtitle">Welcome! </h6>
+            <h4 class="title">Select Your Seats</h4>
+            <div class="thumb">
+                <img src="{% static '/images/movie/seat-plan.png' %}" alt="movie">
+            </div>
+            <a href="movie-seat-plan.html" class="custom-button seatPlanButton">Seat Plans<i class="fas fa-angle-right"></i></a>
+        </div>
+    </section>
+    <!-- ==========Window-Warning-Section========== -->
+
+    <!-- ==========Banner-Section========== -->
+    <section class="details-banner hero-area bg_img" data-background="{% static '/images/banner/banner03.jpg' %}">
+        <div class="container">
+            <div class="details-banner-wrapper">
+                <div class="details-banner-content">
+                    <h3 class="title">Расписание фильмов</h3>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Banner-Section========== -->
+
+    <!-- ==========Book-Section========== -->
+    <section class="book-section bg-one">
+        <div class="container">
+            <form class="ticket-search-form two">
+                <div class="form-group">
+                    <div class="t   humb">
+                        <img src="{% static '/images/ticket/city.png' %}" alt="ticket">
+                    </div>
+                    <span class="type">city</span>
+                    <select class="select-bar">
+                        <option value="london">London</option>
+                        <option value="dhaka">dhaka</option>
+                        <option value="rosario">rosario</option>
+                        <option value="madrid">madrid</option>
+                        <option value="koltaka">kolkata</option>
+                        <option value="rome">rome</option>
+                        <option value="khoksa">khoksa</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="thumb">
+                        <img src="{% static '/images/ticket/date.png' %}" alt="ticket">
+                    </div>
+                    <span class="type">Дата</span>
+                    <select class="select-bar">
+                        {% for date in time_tables %}
+                        <option value="26-12-19">{{ date.date }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="thumb">
+                        <img src="{% static '/images/ticket/cinema.png' %}" alt="ticket">
+                    </div>
+                    <span class="type">cinema</span>
+                    <select class="select-bar">
+                        <option value="Awaken">Awaken</option>
+                        <option value="Venus">Venus</option>
+                        <option value="wanted">wanted</option>
+                        <option value="joker">joker</option>
+                        <option value="fid">fid</option>
+                        <option value="kidio">kidio</option>
+                        <option value="mottus">mottus</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="thumb">
+                        <img src="{% static '/images/ticket/exp.png' %}" alt="ticket">
+                    </div>
+                    <span class="type">Experience</span>
+                    <select class="select-bar">
+                        <option value="English-2D">English-2D</option>
+                        <option value="English-3D">English-3D</option>
+                        <option value="Hindi-2D">Hindi-2D</option>
+                        <option value="Hindi-3D">Hindi-3D</option>
+                        <option value="Telegu-2D">Telegu-2D</option>
+                        <option value="Telegu-3D">Telegu-3D</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- ==========Book-Section========== -->
+
+    <!-- ==========Movie-Section========== -->
+    <div class="ticket-plan-section padding-bottom padding-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 mb-5 mb-lg-0">
+                    <ul class="seat-plan-wrapper bg-five">
+                        {% for time in time_table.time_table_movie.all %}
+                        <li>
+                            <div class="movie-name">
+                                <div class="icons">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <a href="{% url 'movie_detail' time.movie.id %}" class="name">{{ time.movie }}</a>
+                                
+                            </div>
+                            <div class="movie-schedule">
+                                {% for time in time.time_table_movie.all %}
+                                <div class="item">
+                                    {{ time.time_movie }}
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </li>                        
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-10">
+                    <div class="widget-1 widget-banner">
+                        <div class="widget-1-body">
+                            {% for advert in adverts %}
+                            <a href="#0">
+                                <img src="{{ advert.image.url }}" alt="banner">
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Movie-Section========== -->
+
+    <!-- ==========Newslater-Section========== -->
+    {% include 'include/footer.html' %}
+    <!-- ==========Newslater-Section========== -->
+
+{% endblock %}

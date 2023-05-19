@@ -1,0 +1,19 @@
+{% extends 'homepage.html' %}
+{% block content %}
+{% load static %}
+<h4 class="text-1" style= "  text-align: center;
+margin-top: 200px;  " >Thank you for your message! </h4>
+<button autofocus class="btn" style="margin-top: 200px;" ><a href="{% url 'index'  %}">Home</a></button>
+<script>
+    const delay = (delayInms) => {
+        return new Promise(resolve => setTimeout(resolve, delayInms));
+    }
+
+    const sample = async () => {
+        let delayres = await delay(5000);
+        document.location.href = "{% url 'index' %}";
+
+    }
+    sample();
+</script>
+{% endblock %}

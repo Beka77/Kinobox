@@ -1,0 +1,66 @@
+<header class="header-section">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="logo">
+                <a href="{% url 'index' %}">
+                    <img src="{{ setting.logo.url }}" alt="logo">
+                </a>
+            </div>
+
+            <ul class="menu" style="margin-right: 180px;">
+                <li>
+                    <a href="{% url 'index' %}">Домой</a>
+                </li>
+                <li>
+                    <a href="{% url 'index' %}">Расписание фильмов </a>
+
+                </li>
+                <li>
+                    <a href="{% url 'events' %}">События</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="{% url 'events' %}">Events</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'news_detail ' %}">Event Details</a>
+                        </li>
+                        <li>
+                            <a href="event-speaker.html">Event Speaker</a>
+                        </li>
+                        <li>
+                            <a href="event-ticket.html">Event Ticket</a>
+                        </li>
+                        <li>
+                            <a href="event-checkout.html">Event Checkout</a>
+                        </li>
+                    </ul>
+                </li>
+                {% if request.user.is_authenticated %}
+                <li>
+                    <a href="{% url 'contact' %}">Контакты</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_us' %}">О нас</a>
+                </li>
+                <li>
+                    <a href="{% url 'logout' %}">Выйти</a>
+                </li>
+                {% else %}
+                <li class="header-button pr-0">
+                    <a href="{% url 'register' %}">join us</a>
+                </li>
+                {% endif %}
+            </ul>
+            <div class="header-bar d-lg-none">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
