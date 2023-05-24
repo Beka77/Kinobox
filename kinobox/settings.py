@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-import config
+import konfiguration
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -110,11 +110,11 @@ USE_I18N = True
 USE_TZ = True
 
 
-EMAIL_USE_TLS = config.EMAIL_USE_TLS
-EMAIL_HOST = config.EMAIL_HOST
-EMAIL_PORT = config.EMAIL_PORT
-EMAIL_HOST_USER = config.EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = config.EMAIL_HOST_PASSWORD
+EMAIL_USE_TLS = konfiguration.EMAIL_USE_TLS
+EMAIL_HOST = konfiguration.EMAIL_HOST
+EMAIL_PORT = konfiguration.EMAIL_PORT
+EMAIL_HOST_USER = konfiguration.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = konfiguration.EMAIL_HOST_PASSWORD
 
 AUTH_USER_MODEL = 'users.User'
 
