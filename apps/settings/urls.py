@@ -10,6 +10,9 @@ from apps.settings.views import (
     user_not_found,
     register_error,
     events,
+    event_speaker,
+    event_ticket,
+    event_checkout,
 )
 from apps.movies.views import movie_detail
 from apps.timetable.views import index_timetable
@@ -28,4 +31,7 @@ urlpatterns = [
     path("register_error/", register_error, name="register_error"),
     path("error/", error, name="error"),
     path("events/", events, name="events"),
+    path("event_speaker/", event_speaker, name="event_speaker"),
+    path("event_ticket/", event_ticket, name="event_ticket"),
+    path("event_checkout/", event_checkout, name="event_checkout"),
 ]

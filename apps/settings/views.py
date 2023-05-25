@@ -75,6 +75,27 @@ def events(request):
     }
     return render(request, "events.html", context)
 
+def event_speaker(request):
+    setting = Settings.objects.latest("id")
+    context = {
+        "setting" : setting
+    }
+    return render(request, "event-speaker.html", context)
+
+def event_ticket(request):
+    setting = Settings.objects.latest("id")
+    context = {
+        "setting" : setting
+    }
+    return render(request, "event-ticket.html", context)
+
+def event_checkout(request):
+    setting = Settings.objects.latest("id")
+    context = {
+        "setting" : setting
+    }
+    return render(request, "event-checkout.html", context)
+
 def error(request):
     return render(request, "404.html")
 
