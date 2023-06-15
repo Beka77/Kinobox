@@ -35,7 +35,18 @@ class Movie(models.Model):
     trailer_url = models.URLField(
         verbose_name="Ссылка на трейлер"
     )
-
+    time = models.CharField(
+        verbose_name="Время",
+        max_length=5,
+    )
+    hall = models.CharField(
+        max_length=20,
+        verbose_name="Зал",
+    )
+    price = models.CharField(
+        max_length=10,
+        verbose_name="Цена"
+    )
     def __str__(self):
         return self.title
 

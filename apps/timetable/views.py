@@ -16,3 +16,4 @@ def index_timetable(request, date_slug):
         'adverts' : adverts,
     }
     return render(request, 'movie-ticket-plan.html', context)
+

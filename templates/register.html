@@ -27,7 +27,7 @@
                         {% csrf_token %}
 
                         <div class="form-group">
-                            <label for="email1">Username<span>*</span></label>
+                            <label for="email1">Имя пользователя<span>*</span></label>
                             <input type="text" name="username" placeholder="Enter Your Username" required>
                         </div>
                         <div class="form-group">
@@ -35,24 +35,23 @@
                             <input type="text" name="email" placeholder="Enter Your Email" required>
                         </div>
                         <div class="form-group">
-                            <label for="pass1">Password<span>*</span></label>
+                            <label for="pass1">Пароль<span>*</span></label>
                             <input type="password" name="password" placeholder="Password" required>
                         </div>
                         <div class="form-group">
-                            <label for="pass2">Confirm Password<span>*</span></label>
+                            <label for="pass2">Подтвердите пароль<span>*</span></label>
                             <input type="password" name="confirm_password" placeholder="Password" required>
                         </div>
                         <div class="form-group checkgroup">
                             <input type="checkbox" id="bal" required checked>
-                            <label for="bal">I agree to the <a href="#0">Terms, Privacy Policy</a> and <a
-                                    href="#0">Fees</a></label>
+                            <label for="bal">Я согласен <a href="#0">Условия, Политика конфиденциальности</a></label>
                         </div>
                         <div class="form-group text-center">
                             <input type="submit" value="Sign Up">
                         </div>
                     </form>
                     <div class="option">
-                        Already have an account? <a href="{% url 'user_login' %}">Login</a>
+                        Уже есть аккаунт? <a href="{% url 'user_login' %}">Авторизоваться</a>
                     </div>
                     <div class="or"><span>Or</span></div>
                     <ul class="social-icons">

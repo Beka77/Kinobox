@@ -1,6 +1,7 @@
 {% extends 'homepage.html' %}
 {% load static %}
 {% block content %}
+
 <body>
     <!-- ==========Preloader========== -->
     <div class="preloader">
@@ -12,37 +13,37 @@
         </div>
     </div>
     <!-- ==========Preloader========== -->
-    
+
     <!-- ==========Sign-In-Section========== -->
     <section class="account-section bg_img" data-background="{% static '/images/account/account-bg.jpg' %}">
         <div class="container">
             <div class="padding-top padding-bottom">
                 <div class="account-area">
                     <div class="section-header-3">
-                        <span class="cate">hello</span>
-                        <h2 class="title">welcome back</h2>
+                        <span class="cate">Здравствуйте!</span>
+                        <h2 class="title">Добро пожаловать</h2>
                     </div>
                     <form class="account-form" method="POST">
-                        {% csrf_token  %}
+                        {% csrf_token %}
                         <div class="form-group">
-                            <label for="email2">Username<span>*</span></label>
-                            <input type="text" name = "username" placeholder="Enter Your Username" required>
+                            <label for="email2">Имя пользователя<span>*</span></label>
+                            <input type="text" name="username" placeholder="Enter Your Username" required>
                         </div>
                         <div class="form-group">
-                            <label for="pass3">Password<span>*</span></label>
-                            <input type="password" name="password"  placeholder="Password" required>
+                            <label for="pass3">Пароль<span>*</span></label>
+                            <input type="password" name="password" placeholder="Password" required>
                         </div>
                         <div class="form-group checkgroup">
                             <input type="checkbox" id="bal2" required checked>
-                            <label for="bal2">remember password</label>
-                            <a href="#0" class="forget-pass">Forget Password</a>
+                            <label for="bal2">Запомнить пароль</label>
+                            <a href="#0" class="forget-pass">Забыли пароль?</a>
                         </div>
                         <div class="form-group text-center">
                             <input type="submit" value="log in">
                         </div>
                     </form>
                     <div class="option">
-                        Don't have an account? <a href="{% url 'register' %}">sign up now</a>
+                        У вас нет аккаунта? <br><a href="{% url 'register' %}">Зарегистрироваться сейчас</a>
                     </div>
                     <div class="or"><span>Or</span></div>
                     <ul class="social-icons">
@@ -68,4 +69,4 @@
     </section>
     <!-- ==========Sign-In-Section========== -->
 
-{% endblock %}
+    {% endblock %}

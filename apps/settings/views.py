@@ -114,3 +114,18 @@ def thank_you(request):
 
 def register_error(request):
     return render(request, "register_error.html")
+
+def app_download(request):
+    setting = Settings.objects.latest("id")
+    context = {
+        "setting" : setting
+    }
+    return render(request, "apps-download.html", context)
+
+
+def calendar(request):
+    setting = Settings.objects.latest("id")
+    context = {
+        "setting" : setting
+    }
+    return render(request, "time-table.html", context)

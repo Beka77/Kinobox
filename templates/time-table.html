@@ -1,0 +1,919 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+<section id="calendar">
+    <div class="list  page_shadow bordered">
+        <div class="row-gap">
+            <div class="col-xs-2 date_block">
+                <span class="today">сегодня</span>
+                <span class="current_date">8 июня</span>
+            </div>
+            <div class="col-xs-10 date_block">
+                <div class="row">
+                    <div class="col-xs-1">
+                        <span class="month_name">Июнь:</span>
+                    </div>
+                    <div class="col-xs-1 selected">
+                        <a href="schedule/2023-06-08">
+                            <span class="week_name">чт</span>
+                            <span>8</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-1">
+                        <a href="schedule/2023-06-09">
+                            <span class="week_name">пт</span>
+                            <span>9</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-1 free_day">
+                        <a href="schedule/2023-06-10">
+                            <span class="week_name">сб</span>
+                            <span>10</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-1 free_day">
+                        <a href="schedule/2023-06-11">
+                            <span class="week_name">вс</span>
+                            <span>11</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-1">
+                        <a href="schedule/2023-06-12">
+                            <span class="week_name">пн</span>
+                            <span>12</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-1">
+                        <a href="schedule/2023-06-13">
+                            <span class="week_name">вт</span>
+                            <span>13</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-1">
+                        <a href="schedule/2023-06-14">
+                            <span class="week_name">ср</span>
+                            <span>14</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="movie_list">
+    <div class="container page_shadow bordered">
+        <div class="row">
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/897" title="Аяш 2">
+                                <span class="movie_name">Аяш 2</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/897" title="Аяш 2">
+                                <img src="{% static 'upload/movies/movie_897/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">17:00</div>
+                            <div class="col-xs-4">Зал № 4</div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">20:30</div>
+                            <div class="col-xs-4">Зал № 4</div>
+                            <div class="col-xs-4">160 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">22:00</div>
+                            <div class="col-xs-4">Зал № 3</div>
+                            <div class="col-xs-4">160 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/989" title="Полчан">
+                                <span class="movie_name">Полчан</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/989" title="Полчан">
+                                <img src="{% static 'upload/movies/movie_989/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">10:20</div>
+                            <div class="col-xs-4">Зал № 4</div>
+                            <div class="col-xs-4">110 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">12:20</div>
+                            <div class="col-xs-4">Зал № 3</div>
+                            <div class="col-xs-4">110 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">13:40</div>
+                            <div class="col-xs-4">Зал № 4</div>
+                            <div class="col-xs-4">110 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">15:35</div>
+                            <div class="col-xs-4">Зал № 3</div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">18:50</div>
+                            <div class="col-xs-4">Зал № 3</div>
+                            <div class="col-xs-4">160 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">20:25</div>
+                            <div class="col-xs-4">Зал № 3</div>
+                            <div class="col-xs-4">160 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">22:20</div>
+                            <div class="col-xs-4">Зал № 4</div>
+                            <div class="col-xs-4">160 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">23:40</div>
+                            <div class="col-xs-4">Зал № 3</div>
+                            <div class="col-xs-4">140 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1004" title="КЕЛИН ТЕМИР ЭМЕС">
+                                <span class="movie_name">КЕЛИН ТЕМИР ЭМЕС</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1004" title="КЕЛИН ТЕМИР ЭМЕС">
+                                <img src="{% static 'upload/movies/movie_1004/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">10:40</div>
+                            <div class="col-xs-4">Зал № 3</div>
+                            <div class="col-xs-4">110 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">12:00</div>
+                            <div class="col-xs-4">Зал № 4</div>
+                            <div class="col-xs-4">110 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">13:55</div>
+                            <div class="col-xs-4">Зал № 3</div>
+                            <div class="col-xs-4">110 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">15:20</div>
+                            <div class="col-xs-4">Зал № 4</div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">17:10</div>
+                            <div class="col-xs-4">Зал № 3</div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">18:40</div>
+                            <div class="col-xs-4">Зал № 4</div>
+                            <div class="col-xs-4">160 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">23:55</div>
+                            <div class="col-xs-4">Зал № 4</div>
+                            <div class="col-xs-4">140 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1039" title="Особняк">
+                                <span class="movie_name">Особняк</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1039" title="Особняк">
+                                <img src="
+                                {% static 'upload/movies/movie_1039/thumb.jpg' %}" width="202" height="300" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">12:20</div>
+                            <div class="col-xs-4">Зал № 5</div>
+                            <div class="col-xs-4">110 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">17:10</div>
+                            <div class="col-xs-4">Зал № 5</div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">18:50</div>
+                            <div class="col-xs-4">Зал № 5</div>
+                            <div class="col-xs-4">160 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">22:10</div>
+                            <div class="col-xs-4">Зал № 5</div>
+                            <div class="col-xs-4">160 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">23:50</div>
+                            <div class="col-xs-4">Зал № 5</div>
+                            <div class="col-xs-4">140 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1043" title="Дочь">
+                                <span class="movie_name">Дочь</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1043" title="Дочь">
+                                <img src="{% static 'upload/movies/movie_1043/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">10:50</div>
+                            <div class="col-xs-4">Зал № 5</div>
+                            <div class="col-xs-4">110 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">14:00</div>
+                            <div class="col-xs-4">Зал № 5</div>
+                            <div class="col-xs-4">110 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1056" title="Русалочка">
+                                <span class="movie_name">Русалочка</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1056" title="Русалочка">
+                                <img src="{% static 'upload/movies/movie_1056/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">10:10</div>
+                            <div class="col-xs-4">Зал № 1</div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">13:50</div>
+                            <div class="col-xs-4">Зал Let'sGO </div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1058" title="Человек-паук: Паутина вселенных">
+                                <span class="movie_name">Человек-паук: Паутина вселенных</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1058" title="Человек-паук: Паутина вселенных">
+                                <img src="{% static 'upload/movies/movie_1058/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">14:45</div>
+                            <div class="col-xs-4">Зал № 1</div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">18:00</div>
+                            <div class="col-xs-4">Зал Let'sGO </div>
+                            <div class="col-xs-4">240 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">21:00</div>
+                            <div class="col-xs-4">Зал VIP</div>
+                            <div class="col-xs-4">340 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1060" title="Форсаж 10">
+                                <span class="movie_name">Форсаж 10</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1060" title="Форсаж 10">
+                                <img src="{% static 'upload/movies/movie_1060/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">20:40</div>
+                            <div class="col-xs-4">Зал Let'sGO </div>
+                            <div class="col-xs-4">240 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">23:20</div>
+                            <div class="col-xs-4">Зал Let'sGO </div>
+                            <div class="col-xs-4">190 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1070" title="Каникулы">
+                                <span class="movie_name">Каникулы</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1070" title="Каникулы">
+                                <img src="{% static 'upload/movies/movie_1070/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">10:40</div>
+                            <div class="col-xs-4">Зал №6</div>
+                            <div class="col-xs-4">110 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">12:20</div>
+                            <div class="col-xs-4">Зал №6</div>
+                            <div class="col-xs-4">110 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">14:00</div>
+                            <div class="col-xs-4">Зал №6</div>
+                            <div class="col-xs-4">110 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">15:30</div>
+                            <div class="col-xs-4">Зал № 5</div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">15:40</div>
+                            <div class="col-xs-4">Зал №6</div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">17:20</div>
+                            <div class="col-xs-4">Зал №6</div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">19:00</div>
+                            <div class="col-xs-4">Зал №6</div>
+                            <div class="col-xs-4">160 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">20:30</div>
+                            <div class="col-xs-4">Зал № 5</div>
+                            <div class="col-xs-4">160 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">20:40</div>
+                            <div class="col-xs-4">Зал №6</div>
+                            <div class="col-xs-4">160 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">22:20</div>
+                            <div class="col-xs-4">Зал №6</div>
+                            <div class="col-xs-4">160 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1072" title="Беглец ">
+                                <span class="movie_name">Беглец </span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1072" title="Беглец ">
+                                <img src="{% static 'upload/movies/movie_1072/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">11:40</div>
+                            <div class="col-xs-4">Зал VIP</div>
+                            <div class="col-xs-4">250 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1073" title="Уикенд с батей ">
+                                <span class="movie_name">Уикенд с батей </span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1073" title="Уикенд с батей ">
+                                <img src="{% static 'upload/movies/movie_1073/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">10:00</div>
+                            <div class="col-xs-4">Зал VIP</div>
+                            <div class="col-xs-4">250 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1074" title="Трансформеры: Восхождение Звероботов">
+                                <span class="movie_name">Трансформеры: Восхождение Звероботов</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1074" title="Трансформеры: Восхождение Звероботов">
+                                <img src="{% static 'upload/movies/movie_1074/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">12:40</div>
+                            <div class="col-xs-4">Зал № 1</div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">14:10</div>
+                            <div class="col-xs-4">Зал VIP</div>
+                            <div class="col-xs-4">250 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">17:20</div>
+                            <div class="col-xs-4">Зал № 1</div>
+                            <div class="col-xs-4">170 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">19:30</div>
+                            <div class="col-xs-4">Зал № 1</div>
+                            <div class="col-xs-4">240 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">21:40</div>
+                            <div class="col-xs-4">Зал № 1</div>
+                            <div class="col-xs-4">240 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">23:50</div>
+                            <div class="col-xs-4">Зал № 1</div>
+                            <div class="col-xs-4">190 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1078" title="Бугимен">
+                                <span class="movie_name">Бугимен</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1078" title="Бугимен">
+                                <img src="{% static 'upload/movies/movie_1078/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">16:40</div>
+                            <div class="col-xs-4">Зал VIP</div>
+                            <div class="col-xs-4">300 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">18:45</div>
+                            <div class="col-xs-4">Зал VIP</div>
+                            <div class="col-xs-4">340 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1079" title="Заклятье. Дом тьмы">
+                                <span class="movie_name">Заклятье. Дом тьмы</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1079" title="Заклятье. Дом тьмы">
+                                <img src="{% static 'upload/movies/movie_1079/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">16:20</div>
+                            <div class="col-xs-4">Зал Let'sGO </div>
+                            <div class="col-xs-4">170 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">23:45</div>
+                            <div class="col-xs-4">Зал VIP</div>
+                            <div class="col-xs-4">290 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 schedule-row">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <div class="film_block schedule-block">
+                            <a href="films/1080" title="Мармадюк">
+                                <span class="movie_name">Мармадюк</span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="film_block schedule-block">
+                            <a href="films/1080" title="Мармадюк">
+                                <img src="{% static 'upload/movies/movie_1080/thumb.jpg' %}" width="202" height="300"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 schedule-list">
+                        <div class="row">
+                            <div class="col-xs-4">Время</div>
+                            <div class="col-xs-4">Зал</div>
+                            <div class="col-xs-4">Цена</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">10:30</div>
+                            <div class="col-xs-4">Зал Let'sGO </div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4">12:10</div>
+                            <div class="col-xs-4">Зал Let'sGO </div>
+                            <div class="col-xs-4">120 сом</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        $('.schedule-row').matchHeight();
+    });
+</script>
+
+
+<section class="movie_list">
+    <div class="container page_shadow">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Скоро на экранах</h1>
+            </div>
+            <div>
+                <div class="col-xs-5ths film_block">
+                    <a href="films/1086" title="Герои волшебного леса">
+                        <img src="{% static 'upload/movies/movie_1086/thumb.jpg' %}" width="202" height="300" alt="">
+                        <span class="movie_name">Герои волшебного леса</span>
+                        <span class="movie_time">75</span>
+                    </a>
+                    <div class="buttons_panel clearfix">
+                        <!--a href="#" class="ticket">билеты</a-->
+                        <a href="films/1086" class="movie_info" title="Герои волшебного леса">о фильме</a>
+                    </div>
+                </div>
+                <div class="col-xs-5ths film_block">
+                    <a href="films/1075" title="Флэш">
+                        <img src="{% static 'upload/movies/movie_1075/thumb.jpg' %}" width="202" height="300" alt="">
+                        <span class="movie_name">Флэш</span>
+                        <span class="movie_time">&nbsp;</span>
+                    </a>
+                    <div class="buttons_panel clearfix">
+                        <!--a href="#" class="ticket">билеты</a-->
+                        <a href="films/1075" class="movie_info" title="Флэш">о фильме</a>
+                    </div>
+                </div>
+                <div class="col-xs-5ths film_block">
+                    <a href="films/1087" title="Индиана Джонс и колесо судьбы">
+                        <img src="{% static 'upload/movies/movie_1087/thumb.jpg' %}" width="202" height="300" alt="">
+                        <span class="movie_name">Индиана Джонс и колесо судьбы</span>
+                        <span class="movie_time">142</span>
+                    </a>
+                    <div class="buttons_panel clearfix">
+                        <!--a href="#" class="ticket">билеты</a-->
+                        <a href="films/1087" class="movie_info" title="Индиана Джонс и колесо судьбы">о фильме</a>
+                    </div>
+                </div>
+                <div class="col-xs-5ths film_block">
+                    <a href="films/1084" title="Без обид ">
+                        <img src="{% static 'upload/movies/movie_1084/thumb.jpg' %}" width="202" height="300" alt="">
+                        <span class="movie_name">Без обид </span>
+                        <span class="movie_time">&nbsp;</span>
+                    </a>
+                    <div class="buttons_panel clearfix">
+                        <!--a href="#" class="ticket">билеты</a-->
+                        <a href="films/1084" class="movie_info" title="Без обид ">о фильме</a>
+                    </div>
+                </div>
+                <div class="col-xs-5ths film_block">
+                    <a href="films/1083" title="Астрал. Женщина в черном ">
+                        <img src="{% static 'upload/movies/movie_1083/thumb.jpg' %}" width="202" height="300" alt="">
+                        <span class="movie_name">Астрал. Женщина в черном </span>
+                        <span class="movie_time">100</span>
+                    </a>
+                    <div class="buttons_panel clearfix">
+                        <!--a href="#" class="ticket">билеты</a-->
+                        <a href="films/1083" class="movie_info" title="Астрал. Женщина в черном ">о фильме</a>
+                    </div>
+                </div>
+                <div class="col-xs-5ths film_block">
+                    <a href="films/1085" title="Шкатулка проклятия. Шепот ведьмы ">
+                        <img src="{% static 'upload/movies/movie_1085/thumb.jpg' %}" width="202" height="300" alt="">
+                        <span class="movie_name">Шкатулка проклятия. Шепот ведьмы </span>
+                        <span class="movie_time">103</span>
+                    </a>
+                    <div class="buttons_panel clearfix">
+                        <!--a href="#" class="ticket">билеты</a-->
+                        <a href="films/1085" class="movie_info" title="Шкатулка проклятия. Шепот ведьмы ">о
+                            фильме</a>
+                    </div>
+                </div>
+                <div class="col-xs-5ths film_block">
+                    <a href="films/1081" title="Элементарно ">
+                        <img src="{% static 'upload/movies/movie_1081/thumb.jpg' %}" width="202" height="300" alt="">
+                        <span class="movie_name">Элементарно </span>
+                        <span class="movie_time">93</span>
+                    </a>
+                    <div class="buttons_panel clearfix">
+                        <!--a href="#" class="ticket">билеты</a-->
+                        <a href="films/1081" class="movie_info" title="Элементарно ">о фильме</a>
+                    </div>
+                </div>
+                <div class="col-xs-5ths film_block">
+                    <a href="films/1076" title="Руби Гильман: Приключения кракена-подростка ">
+                        <img src="{% static 'upload/movies/movie_1076/thumb.jpg' %}" width="202" height="300" alt="">
+                        <span class="movie_name">Руби Гильман: Приключения кракена-подростка </span>
+                        <span class="movie_time">90</span>
+                    </a>
+                    <div class="buttons_panel clearfix">
+                        <!--a href="#" class="ticket">билеты</a-->
+                        <a href="films/1076" class="movie_info" title="Руби Гильман: Приключения кракена-подростка ">о
+                            фильме</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        $('.film_block').matchHeight();
+    });
+</script>
+{% include 'include/footer.html' %}
+{% endblock %}
